@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Práctica - UTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="encabezado-principal">
+
+    <div class="barra-superior">
+
+        <div class="titulo-barra">
+            Reporte de práctica · UTP
+        </div>
+
+        <nav class="menu-principal">
+            <a href="#inicio" class="activo">INICIO</a>
+            <a href="#desarrollo">EJERCICIO</a>
+            <a href="#conclusion">CONCLUSIÓN</a>
+            <a href="#referencias">REFERENCIAS</a>
+        </nav>
+
+    </div>
+
+    <div class="portada-principal">
+
+        <img src="imagenes/logo_utp.png" alt="Logo UTP">
+
+        <h1>Práctica 3</h1>
+
+        <p class="subtitulo">
+            Conexión de ASP.NET Core (.NET 10) con Neon PostgreSQL mediante Npgsql y Dapper
+        </p>
+
+        <div class="datos-portada">
+            <p><strong>Alumno:</strong> Duilio Cesar Capilla Cuautle</p>
+            <p><strong>Carrera:</strong> Desarrollo de Software Multiplataforma</p>
+            <p><strong>Universidad:</strong> Universidad Tecnológica de Puebla</p>
+            <p><strong>Materia:</strong> Base de Datos en la Nube </p>
+            <p><strong>Profesor:</strong> Javier Nolasco Hernandez</p>
+        </div>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section id="inicio" class="tarjeta-reporte">
+
+        <h2>Objetivo de la práctica</h2>
+
+        <p>
+            Configurar un proyecto de ASP.NET Core utilizando .NET 10 para establecer
+            una conexión con una base de datos PostgreSQL alojada en Neon, empleando
+            Npgsql como proveedor de conexión y Dapper para realizar consultas.
+        </p>
+
+    </section>
+
+    <section id="desarrollo" class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 1</span>
+
+        <h2>Verificación de la versión inicial de .NET</h2>
+
+        <p>
+            Se verificó la versión instalada del SDK antes de comenzar la práctica.
+        </p>
+
+        <figure class="figura-practica">
+            <img src="imagenes/01_version_10_0_302.png" alt="">
+            <figcaption>Figura 1. Verificación de la versión inicial instalada.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 2</span>
+
+        <h2>Instalación del SDK .NET 10.0.401</h2>
+
+        <p>Se actualizó el SDK a la versión solicitada para la práctica.</p>
+
+        <figure class="figura-practica">
+            <img src="imagenes/02_instalacion_sdk_10_0_401.png" alt="">
+            <figcaption>Figura 2. Instalación del SDK.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 3</span>
+
+        <h2>Comprobación de la versión instalada</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/03_version_10_0_401.png" alt="">
+            <figcaption>Figura 3. Confirmación de la versión instalada.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 4</span>
+
+        <h2>Actualización mediante Winget</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/04_winget_actualizacion.png" alt="">
+            <figcaption>Figura 4. Actualización con Winget.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 5</span>
+
+        <h2>Listado inicial de plantillas</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/05_dotnet_new_list_inicio.png" alt="">
+            <figcaption>Figura 5. Inicio del listado de plantillas.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 6</span>
+
+        <h2>Plantillas disponibles</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/06_dotnet_new_list_plantillas.png" alt="">
+            <figcaption>Figura 6. Plantillas disponibles.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 7</span>
+
+        <h2>Creación de la carpeta de trabajo</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/07_carpeta_trabajo.png" alt="">
+            <figcaption>Figura 7. Carpeta del proyecto.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 8</span>
+
+        <h2>Creación del proyecto webpneon</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/08_creacion_webpneon.png" alt="">
+            <figcaption>Figura 8. Creación del proyecto.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 9</span>
+
+        <h2>Acceso al proyecto</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/09_acceso_webpneon.png" alt="">
+            <figcaption>Figura 9. Acceso a la carpeta del proyecto.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 10</span>
+
+        <h2>Compilación inicial</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/10_build_inicial.png" alt="">
+            <figcaption>Figura 10. Compilación inicial.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 11</span>
+
+        <h2>Ejecución inicial</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/11_run_inicial.png" alt="">
+            <figcaption>Figura 11. Primera ejecución.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 12</span>
+
+        <h2>Hello World</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/12_hello_world.png" alt="">
+            <figcaption>Figura 12. Resultado inicial.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 13</span>
+
+        <h2>Creación de la tabla alumnos</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/13_tabla_alumnos_neon.png" alt="">
+            <figcaption>Figura 13. Tabla creada en Neon.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 14</span>
+
+        <h2>Obtención de la cadena de conexión</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/14_neon_connection_string.png" alt="">
+            <figcaption>Figura 14. Connection String de Neon.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 15</span>
+
+        <h2>Configuración de appsettings.json</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/15_appsettings_redactado.png" alt="">
+            <figcaption>Figura 15. Configuración protegida.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 16</span>
+
+        <h2>Instalación de Npgsql</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/16_instalacion_npgsql.png" alt="">
+            <figcaption>Figura 16. Instalación del paquete Npgsql.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 17</span>
+
+        <h2>Conexión exitosa</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/17_conexion_exitosa.png" alt="">
+            <figcaption>Figura 17. Conexión establecida.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 18</span>
+
+        <h2>Instalación de Dapper</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/18_instalacion_dapper.png" alt="">
+            <figcaption>Figura 18. Instalación de Dapper.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 19</span>
+
+        <h2>Program.cs actualizado</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/19_program_cs.png" alt="">
+            <figcaption>Figura 19. Configuración del endpoint.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 20</span>
+
+        <h2>Consulta del endpoint /alumnos</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/20_endpoint_alumnos.png" alt="">
+            <figcaption>Figura 20. Resultado JSON obtenido.</figcaption>
+        </figure>
+
+    </section>
+
+    <section class="tarjeta-reporte">
+
+        <span class="etiqueta-paso">Paso 21</span>
+
+        <h2>Compilación final y reapertura del proyecto</h2>
+
+        <figure class="figura-practica">
+            <img src="imagenes/21_build_run_final.png" alt="">
+            <figcaption>Figura 21. Ejecución final.</figcaption>
+        </figure>
+
+        <figure class="figura-practica">
+            <img src="imagenes/22_reabrir_proyecto.png" alt="">
+            <figcaption>Figura 22. Reapertura del proyecto en Visual Studio.</figcaption>
+        </figure>
+
+    </section>
+
+    <section id="conclusion" class="tarjeta-reporte">
+
+        <h2>Conclusión</h2>
+
+        <p>
+            Durante esta práctica se configuró correctamente un proyecto de ASP.NET Core
+            con .NET 10, estableciendo una conexión con PostgreSQL alojado en Neon mediante
+            Npgsql y realizando consultas con Dapper.
+        </p>
+
+        <p>
+            Finalmente se comprobó el funcionamiento del endpoint <code>/alumnos</code>,
+            obteniendo los registros almacenados en la base de datos.
+        </p>
+
+    </section>
+
+    <section id="referencias" class="tarjeta-reporte">
+
+        <h2>Referencias</h2>
+
+        <ul>
+            <li>Microsoft Learn – ASP.NET Core.</li>
+            <li>Documentación oficial de Neon PostgreSQL.</li>
+            <li>Documentación oficial de Npgsql.</li>
+            <li>Documentación oficial de Dapper.</li>
+        </ul>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

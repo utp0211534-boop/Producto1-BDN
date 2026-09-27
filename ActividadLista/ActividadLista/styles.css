@@ -1,0 +1,11 @@
+:root{--navy:#17365d;--blue:#2f5597}
+body{margin:0;background:#eef2f6;font-family:Arial,sans-serif;color:#1f2937;line-height:1.6}
+.documento{max-width:920px;margin:24px auto;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.portada,.pagina{padding:60px 70px}
+.portada{text-align:center;border-top:18px solid var(--navy)}
+h1,h2{color:var(--navy)}h3{color:var(--blue)}
+.datos{width:80%;margin:25px auto;border-collapse:collapse}
+.datos td{padding:8px;border-bottom:1px solid #ddd}
+.paso{margin:26px 0}
+.paso img{width:100%;max-width:760px;display:block;margin:12px auto;border:1px solid #ccc;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+pre{background:#111827;color:#fff;padding:16px;border-radius:8px}

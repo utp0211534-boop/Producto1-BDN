@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Reporte Neon</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+    <nav class='top'><a href='#portada'>Inicio</a><a href='#php'>PHP</a><a href='#dotnet'>.NET</a><a href='#go'>Go</a><a
+            href='#rust'>Rust</a><a href='#python'>Python</a></nav>
+    <main class='doc'>
+        <section id='portada' class='page cover'><img src='img/logo utp.jpg' class='logo'>
+            <h1>Universidad Tecnológica de Puebla</h1>
+            <h2>TSU en Desarrollo de Software Multiplataforma</h2>
+            <h1>Implementación de aplicaciones web para respaldar una base de datos en Neon</h1>
+            <table class='datos'>
+                <tr>
+                    <td>Alumno</td>
+                    <td>Duilio César Capilla Cuautle</td>
+                </tr>
+                <tr>
+                    <td>Grupo</td>
+                    <td>7°E</td>
+                </tr>
+                <tr>
+                    <td>Periodo</td>
+                    <td>2026</td>
+                </tr>
+            </table>
+            <div class='req'>
+                <h3>Contenido del reporte</h3>
+                <ol>
+                    <li>Portada</li>
+                    <li>Índice</li>
+                    <li>Introducción</li>
+                    <li>Marco teórico con citas APA</li>
+                    <li>Conclusión</li>
+                    <li>Referencias bibliográficas APA</li>
+                </ol>
+            </div>
+        </section>
+        <section class='page'>
+            <h2>Índice</h2>
+            <ol>
+                <li>Introducción</li>
+                <li>Marco teórico</li>
+                <li>Procedimiento detallado de la práctica</li><li>Conclusión</li><li>Referencias bibliográficas APA</li>
+            </ol>
+            <h2>Introducción</h2>
+            <p>En esta práctica se desarrollaron cinco aplicaciones web para generar respaldos de una base de datos
+                PostgreSQL alojada en Neon mediante pg_dump.</p>
+            <h2>Marco teórico</h2>
+            <p>PostgreSQL es un gestor de bases de datos relacional que incorpora la utilidad pg_dump para crear copias
+                de seguridad lógicas. Neon proporciona PostgreSQL en la nube con conexiones seguras SSL. Cada lenguaje
+                utilizado implementó una interfaz web con un botón que ejecuta el respaldo y descarga el archivo SQL.
+            </p>
+        </section>
+        <section id='php' class='page'>
+            <h2>Aplicación Web en PHP</h2>
+            <h3>Paso 1</h3>
+            <p>Se preparó el entorno de trabajo creando la estructura del proyecto y organizando los archivos necesarios para iniciar el desarrollo de la aplicación.</p><img
+                src='img/paso 1 php.png' class='cap'>
+            <h3>Paso 2</h3>
+            <p>Se configuró el código principal de la aplicación y se verificó que el servidor local iniciara correctamente.</p><img
+                src='img/paso 2  php.png' class='cap'>
+            <h3>Paso 3</h3>
+            <p>Se probó la aplicación desde el navegador para comprobar que la interfaz funcionara y que la conexión con el proyecto fuera correcta.</p><img
+                src='img/paso 3 php.png' class='cap'>
+            <h3>Paso 4</h3>
+            <p>Se verificó la configuración de pg_dump y la generación del archivo SQL mediante la ejecución desde el servidor.</p><img
+                src='img/paso 4 php.png' class='cap'>
+            <h3>Paso 5</h3>
+            <p>Se presionó el botón Generar respaldo y se confirmó la descarga automática del archivo SQL creado desde la base de datos de Neon.</p><img
+                src='img/paso 5 php .png' class='cap'>
+        </section>
+        <section id='dotnet' class='page'>
+            <h2>Aplicación Web en .NET</h2>
+            <h3>Paso 1</h3>
+            <p>Se preparó el entorno de trabajo creando la estructura del proyecto y organizando los archivos necesarios para iniciar el desarrollo de la aplicación.</p><img
+                src='img/paso 1 net.png' class='cap'>
+            <h3>Paso 2</h3>
+            <p>Se configuró el código principal de la aplicación y se verificó que el servidor local iniciara correctamente.</p><img
+                src='img/paso 2 net .png' class='cap'>
+            <h3>Paso 3</h3>
+            <p>Se probó la aplicación desde el navegador para comprobar que la interfaz funcionara y que la conexión con el proyecto fuera correcta.</p><img
+                src='img/paso 3 net .png' class='cap'>
+            <h3>Paso 4</h3>
+            <p>Se verificó la configuración de pg_dump y la generación del archivo SQL mediante la ejecución desde el servidor.</p><img
+                src='img/paso 4 net .png' class='cap'>
+        </section>
+        <section id='go' class='page'>
+            <h2>Aplicación Web en Golang</h2>
+            <h3>Paso 1</h3>
+            <p>Se preparó el entorno de trabajo creando la estructura del proyecto y organizando los archivos necesarios para iniciar el desarrollo de la aplicación.</p><img
+                src='img/paso 1 web .png' class='cap'>
+            <h3>Paso 2</h3>
+            <p>Se configuró el código principal de la aplicación y se verificó que el servidor local iniciara correctamente.</p><img
+                src='img/paso 2 web.png' class='cap'>
+            <h3>Paso 3</h3>
+            <p>Se probó la aplicación desde el navegador para comprobar que la interfaz funcionara y que la conexión con el proyecto fuera correcta.</p><img
+                src='img/paso 3 web .png' class='cap'>
+            <h3>Paso 4</h3>
+            <p>Se verificó la configuración de pg_dump y la generación del archivo SQL mediante la ejecución desde el servidor.</p><img
+                src='img/paso 4 web.png' class='cap'>
+            <h3>Paso 5</h3>
+            <p>Se presionó el botón Generar respaldo y se confirmó la descarga automática del archivo SQL creado desde la base de datos de Neon.</p><img
+                src='img/paso 5 web .png' class='cap'>
+        </section>
+        <section id='rust' class='page'>
+            <h2>Aplicación Web en Rust</h2>
+            <h3>Paso 1</h3>
+            <p>Se preparó el entorno de trabajo creando la estructura del proyecto y organizando los archivos necesarios para iniciar el desarrollo de la aplicación.</p><img
+                src='img/paso1 web rust.png' class='cap'>
+            <h3>Paso 2</h3>
+            <p>Se configuró el código principal de la aplicación y se verificó que el servidor local iniciara correctamente.</p><img
+                src='img/paso 2 rust.png' class='cap'>
+            <h3>Paso 3</h3>
+            <p>Se probó la aplicación desde el navegador para comprobar que la interfaz funcionara y que la conexión con el proyecto fuera correcta.</p><img
+                src='img/paso 3 rust.png' class='cap'>
+            <h3>Paso 4</h3>
+            <p>Se verificó la configuración de pg_dump y la generación del archivo SQL mediante la ejecución desde el servidor.</p><img
+                src='img/paso 4 rust .png' class='cap'>
+            <h3>Paso 5</h3>
+            <p>Se presionó el botón Generar respaldo y se confirmó la descarga automática del archivo SQL creado desde la base de datos de Neon.</p><img
+                src='img/paso 5 rust .png' class='cap'>
+        </section>
+        <section id='python' class='page'>
+            <h2>Aplicación Web en Python</h2>
+            <h3>Paso 1</h3>
+            <p>Se preparó el entorno de trabajo creando la estructura del proyecto y organizando los archivos necesarios para iniciar el desarrollo de la aplicación.</p><img
+                src='img/paso 1 Python.png' class='cap'>
+            <h3>Paso 2</h3>
+            <p>Se configuró el código principal de la aplicación y se verificó que el servidor local iniciara correctamente.</p><img
+                src='img/paso 2 Python.png' class='cap'>
+            <h3>Paso 3</h3>
+            <p>Se probó la aplicación desde el navegador para comprobar que la interfaz funcionara y que la conexión con el proyecto fuera correcta.</p><img
+                src='img/paso 3 Python.png' class='cap'>
+            <h3>Paso 4</h3>
+            <p>Se verificó la configuración de pg_dump y la generación del archivo SQL mediante la ejecución desde el servidor.</p><img
+                src='img/paso 4 Python.png' class='cap'>
+        </section>
+        <section class='page'>
+            <h2>Conclusión</h2>
+            <p>Se comprobó que es posible automatizar respaldos de PostgreSQL desde aplicaciones web desarrolladas en
+                cinco lenguajes diferentes, reforzando el uso de herramientas de desarrollo y administración de bases de
+                datos.</p>
+            <h2>Referencias APA</h2>
+            <ul>
+                <li>Neon. (2025). Neon Documentation. https://neon.tech/docs</li>
+                <li>PostgreSQL Global Development Group. (2025). PostgreSQL Documentation. https://www.postgresql.org/docs/</li>
+                <li>Microsoft. (2025). ASP.NET Core Documentation. https://learn.microsoft.com/aspnet/core/</li>
+                <li>Rust Foundation. (2025). Rust Documentation. https://doc.rust-lang.org/</li>
+                <li>The Go Authors. (2025). Go Documentation. https://go.dev/doc/</li>
+                <li>Pallets. (2025). Flask Documentation. https://flask.palletsprojects.com/</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

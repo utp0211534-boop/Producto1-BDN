@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Práctica PostgreSQL y Neon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="documento">
+        <section class="portada">
+            <h1>Universidad Tecnológica de Puebla</h1>
+            <p>TSU en Desarrollo de Software Multiplataforma</p>
+            <h2>Práctica: Base de Datos de Asistencias con PostgreSQL y Neon</h2>
+            <table class="datos">
+                <tr>
+                    <td>Alumno</td>
+                    <td>Duilio César Capilla Cuautle</td>
+                </tr>
+                <tr>
+                    <td>Grupo</td>
+                    <td>7° E</td>
+                </tr>
+                <tr>
+                    <td>Docente:</td>
+                    <td>Javier Nolasco Hernandez</td>
+                </tr>
+                <tr> 
+<td>Materia:</td>
+                    <td>Optativa I – Base de Datos en la Nube</td>
+
+                </tr>
+            </table>
+        </section>
+
+        <section class="pagina">
+            <h2>Objetivo</h2>
+            <p>Implementar una base de datos de asistencias utilizando PostgreSQL y Neon.</p>
+
+            <h2>Desarrollo de la práctica</h2>
+
+            <!-- PASO 1 -->
+            <div class="paso">
+                <h3>Paso 1. Verificación de PostgreSQL</h3>
+                <p>Se comprobó la instalación mediante <code>psql --version</code>.</p>
+                <img src="img/paso1.png">
+            </div>
+
+            <!-- PASO 2 -->
+            <div class="paso">
+                <h3>Paso 2. Conexión con la base de datos en Neon</h3>
+                <p>Se estableció la conexión desde CMD utilizando la cadena de conexión de Neon y una conexión SSL.</p>
+                <img src="img/paso2.png">
+            </div>
+
+            <!-- PASOS 3-10 -->
+            <div class="paso">
+                <h3>3. Revisión del entorno de base de datos</h3>
+                <p>Una vez dentro de psql, se revisó el entorno disponible para comprobar que se estaba trabajando en la instancia correcta. Esta verificación ayudó a identificar la base de datos activa y a confirmar que la sesión estaba lista para ejecutar las instrucciones de la práctica.</p>
+                <img src="img/3.png">
+            </div>
+            <div class="paso">
+                <h3> 4 Creación del modelo de asistencias</h3>
+                <p>Se diseñó un esquema llamado practica_7e para mantener separadas las tablas de esta actividad. Dentro del esquema se crearon las tablas materia, profesor, grupo, alumnos y asistencia. También se insertaron los datos del grupo 7E, sus materias, profesores y alumnos. La tabla asistencia quedó relacionada con las demás tablas mediante claves foráneas.</p>
+                <img src="img/paso4.png">
+            </div>
+            <div class="paso">
+                <h3> 5 Comprobación de las tablas creadas</h3>
+                <p>Con el comando \dt se comprobó que las cinco tablas de la práctica fueron creadas dentro del esquema practica_7e. La salida mostró alumnos, asistencia, grupo, materia y profesor, todas pertenecientes al usuario de la base de datos.</p>
+                <img src="img/paso5.png">
+            </div>
+            <div class="paso">
+                <h3>6. Consulta de los registros de asistencia</h3>
+                <p>Posteriormente se ejecutó una consulta sobre la tabla asistencia. El resultado mostró cuatro registros correspondientes a la materia 6, grupo 1 y profesor 6, con los alumnos 6, 30, 31 y 35 en la fecha 18 de septiembre de 2026. Con esto se comprobó que los datos habían sido insertados correctamente</p>
+                <img src="img/paso6.png">
+            </div>
+            <div class="paso">
+                <h3>7. Preparación del archivo de la práctica</h3>
+                <p>En la carpeta de trabajo se revisaron los archivos del proyecto antes de ejecutar el script desde la terminal. Esta parte permitió comprobar la ubicación desde la cual se trabajó y mantener organizado el archivo SQL junto con los demás recursos de la actividad.
+</p>
+                <img src="img/paso7.png">
+            </div>
+            <div class="paso">
+                <h3>8. Ejecución completa del script y consulta con relaciones</h3>
+                <p>El script se ejecutó desde la terminal contra la base de datos de Neon. Durante la ejecución se eliminaron y recrearon los objetos necesarios, se generaron las tablas y se insertaron los datos. Además, se realizó una consulta relacionando las tablas para mostrar información más comprensible: fecha, alumno, materia, grupo y profesor, en lugar de mostrar solamente identificadores numéricos.</p>
+                <img src="img/paso8.png">
+            </div>
+            <div class="paso">
+                <h3>9. Validación final de tablas y datos
+
+</h3>
+                <p>Para verificar el resultado final se utilizó \dt practica_7e.*, con lo que se confirmó que las cinco tablas pertenecían al esquema correcto. Después se consultó practica_7e.asistencia y nuevamente se observaron los cuatro registros esperados.</p>
+                <img src="img/paso9.png">
+            </div>
+            <div class="paso">
+                <h3>10. Comprobación de la clave primaria compuesta y claves foráneas
+</h3>
+                <p>Finalmente se inspeccionó la estructura de la tabla con \d practica_7e.asistencia. Se confirmó que sus cinco campos son obligatorios y que la clave primaria es compuesta por idmateria, idgrupo, idprofesor, idalumno y fecha. También se comprobaron las cuatro claves foráneas hacia las tablas de alumnos, grupos, materias y profesores. Esta decisión evita registrar dos veces exactamente la misma asistencia para el mismo alumno, materia, grupo, profesor y fecha.</p>
+                <img src="img/paso10.png">
+                <p>Después de registrar las asistencias de los alumnos, se consultó la vista lista_asistencia ordenando los registros mediante el identificador de cada alumno. Esta vista permite presentar la información de una manera similar a la lista de asistencia original, colocando a los alumnos en las filas y los días de clase en las columnas.</p>
+            <pre>
+                SELECT * FROM lista_asistencia
+ORDER BY idalumno;</pre>
+            <img src="img/listaa.png">
+            <h2>Conclusión</h2>
+            <p>Con esta práctica pude comprender de una forma más clara cómo se estructura una base de datos relacional y cómo se conectan diferentes tablas por medio de claves foráneas. También aprendí que no siempre es necesario utilizar un identificador automático para cada registro, ya que en el caso de la tabla asistencia fue más conveniente utilizar una clave primaria compuesta con los campos de materia, grupo, profesor, alumno y fecha.
+
+Además, pude practicar el uso de PostgreSQL desde la terminal con psql y trabajar con una base de datos alojada en Neon. Las consultas de verificación me permitieron comprobar que las tablas se crearon correctamente, que los registros fueron insertados y que las relaciones entre las tablas funcionan. En general, la práctica ayudó a reforzar el uso de SQL y la importancia de diseñar correctamente las llaves y relaciones antes de almacenar información.</p>
+        </section>
+    </main>
+</body>
+
+</html>

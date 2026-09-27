@@ -1,0 +1,337 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#eef2f7;
+    color:#222;
+    line-height:1.6;
+}
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.barra-superior{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:white;
+    border-bottom:1px solid #d5dbe4;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 35px;
+}
+
+.titulo-barra{
+    font-weight:bold;
+    color:#173f66;
+    font-size:18px;
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu-principal{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.menu-principal a{
+
+    text-decoration:none;
+
+    color:#173f66;
+
+    border:1px solid #ccd5e0;
+
+    background:white;
+
+    padding:8px 16px;
+
+    border-radius:6px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+.menu-principal a:hover{
+
+    background:#0b4f8a;
+
+    color:white;
+}
+
+.menu-principal .activo{
+
+    background:#0b4f8a;
+
+    color:white;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.encabezado-principal{
+
+    background:linear-gradient(180deg,#0b4f8a,#0a4275);
+
+    color:white;
+}
+
+.portada-principal{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:55px 20px 60px;
+}
+
+.portada-principal img{
+
+    width:130px;
+
+    margin-bottom:20px;
+}
+
+.portada-principal h1{
+
+    font-size:46px;
+
+    margin-bottom:10px;
+}
+
+.subtitulo{
+
+    font-size:18px;
+
+    opacity:.95;
+
+    margin-bottom:30px;
+}
+
+.datos-portada{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(5px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:14px;
+
+    padding:22px;
+
+    text-align:left;
+
+    max-width:620px;
+
+    margin:auto;
+}
+
+.datos-portada p{
+
+    margin:7px 0;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+main{
+
+    max-width:960px;
+
+    margin:auto;
+
+    padding:35px 20px 60px;
+}
+
+.tarjeta-reporte{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:32px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+    border:1px solid #e3e8ef;
+}
+
+/* =========================
+   ETIQUETA PASO
+========================= */
+
+.etiqueta-paso{
+
+    display:inline-block;
+
+    background:#d9ebff;
+
+    color:#0b4f8a;
+
+    border:1px solid #9ec8ff;
+
+    padding:7px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+.tarjeta-reporte h2{
+
+    color:#0b4f8a;
+
+    margin-bottom:18px;
+
+    font-size:30px;
+}
+
+.tarjeta-reporte p{
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   FIGURAS
+========================= */
+
+.figura-practica{
+
+    margin-top:22px;
+
+    border:1px solid #d8dee7;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    background:#fafafa;
+}
+
+.figura-practica img{
+
+    width:100%;
+
+    display:block;
+}
+
+.figura-practica figcaption{
+
+    background:white;
+
+    border-top:1px solid #d8dee7;
+
+    padding:14px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#555;
+}
+
+/* =========================
+   LISTAS
+========================= */
+
+ul{
+
+    padding-left:22px;
+}
+
+li{
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   CÓDIGO
+========================= */
+
+code{
+
+    background:#eef2f7;
+
+    padding:3px 7px;
+
+    border-radius:5px;
+
+    color:#0b4f8a;
+
+    font-family:Consolas,monospace;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .barra-superior{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        padding:15px;
+    }
+
+    .menu-principal{
+
+        justify-content:center;
+    }
+
+    .portada-principal h1{
+
+        font-size:34px;
+    }
+
+    .subtitulo{
+
+        font-size:16px;
+    }
+
+    .tarjeta-reporte{
+
+        padding:22px;
+    }
+
+    .tarjeta-reporte h2{
+
+        font-size:25px;
+    }
+}
